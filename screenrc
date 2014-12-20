@@ -1,0 +1,37 @@
+escape ^j^j
+
+scrollback 100000
+
+#color256
+defbce "on"
+#term screen-256color
+#term xterm-256color #mac osx terminal
+
+#mac osx terminal ver.snow leopard
+term xterm-color 
+termcapinfo xterm* ti@:te@
+
+##status line
+caption always "%{= Gk} %-Lw%40L>%{b kg} %n %t %{-}%+Lw%-040=%{b km} %l %{.b} %Y/%m/%d %C:%s %A "
+hardstatus alwayslastline "%?%h%:%t (screen #%n on %H)%? %l"
+
+##key bind
+##class
+bind ^a command -c app
+#cpan
+bind -c app c screen -t CPAN perl -MCPAN -e shell
+#open cpan for w3m
+bind -c app p screen -t cpan.org w3m http://cpan.org
+
+
+##region
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+
+##one command
+bind 'h' history
+bind 's' colon 'screen ssh'
+#window
+bind ^j other
