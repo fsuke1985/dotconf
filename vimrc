@@ -1,8 +1,8 @@
 "===========================
 "init .vimrc
 "===========================
+inoremap <C-e> <Esc>
 autocmd!
-"verbose
 set verbose=0
 
 syntax on
@@ -27,24 +27,32 @@ set shiftwidth=4
 set shiftround
 set cursorline
 colorscheme koehler
-"helptags ~/.vim/doc
 set encoding=utf-8
 
 "===========================
 "perl
 "===========================
-map <F4> :w !perl<CR>
+nmap <F4> :w !perl<CR>
 autocmd BufNewFile,BufRead t,psgi  set filetype=perl
 autocmd FileType perl,cgi,psgi :compiler perl
+command! Tf :edit `=tempname()`
+command! Tfp :edit `=tempname()`|:set filetype=perl
+"add comment for perl
+nmap ,# :s/^/#/<CR>:nohlsearch<CR>
+"snippet
+inoreabbrev PDA use Data::Dumper; $Data::Dumper::Deparse = 1;
+inoreabbrev PST #!/usr/bin/perl<CR>use strict;<CR>use warnings;<CR><CR>
 
 "===========================
 "python
 "===========================
 autocmd BufNewFile,BufRead *.py  set filetype=python
 autocmd BufNewFile,BufRead *.py  0r $HOME/.vim/template/python.temp
+inoreabbrev PYST #!/usr/bin/python<CR>#-*-coding: utf8-*-<CR>
 
-
-
+"===========================
+"HTML
+"===========================
 
 "===========================
 "vi util
@@ -54,31 +62,25 @@ autocmd BufNewFile,BufRead *.py  0r $HOME/.vim/template/python.temp
 nmap <C-n> :bn<CR>
 "buffer pre
 nmap <C-p> :bp<CR>
-"add comment for perl
-nmap ,# :s/^/#/<CR>
 "nomar-mod insert CR
 nmap <CR> i<CR><ESC>
+
+"//visual mode//
 "visual out mode indent
 vnoremap > >gv
 vnoremap < <gv
-"closed {}
+
+"//etc//
+"auto closed {}
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-
-
-
-"//autocmd//
 "Buf enter -> currentbuf
 autocmd BufEnter * execute ":lcd".expand("%:p:h")
 "serch hilight erase
 nmap <silent><C-\> :nohlsearch <CR><ESC>
-command! Tf :edit `=tempname()`
-command! Tfp :edit `=tempname()`|:set filetype=perl
-autocmd BufNewFile,BufRead tt  set filetype=html
-inoremap <C-c> <Esc>
 
-"//user function
+"//user function//
 function! Crfc()
     :!osascript ~/.vim/bin/chrome_reflash.scpt
 endfunction
