@@ -35,6 +35,8 @@ set encoding=utf-8
 nmap <F4> :w !perl<CR>
 autocmd BufNewFile,BufRead t,psgi  set filetype=perl
 autocmd FileType perl,cgi,psgi :compiler perl
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl
+autocmd BufNewFile,BufRead *.t      set filetype=perl
 command! Tf :edit `=tempname()`
 command! Tfp :edit `=tempname()`|:set filetype=perl
 "add comment for perl
