@@ -1,4 +1,4 @@
-export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin
+export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin:~/project/bin/
 
 #prompt
 #export PS1="[\W]$ " goto git > autocomplete
@@ -46,6 +46,6 @@ alias perldoc="/usr/bin/perldoc5.16"
 
 #git
 ##autocomplete
-source ./git-completion.bash
-source ./git-prompt.bash
+source ~/.gitd/dotconf/git-completion.bash
+source ~/.gitd/dotconf/git-prompt.bash
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
