@@ -1,7 +1,7 @@
 export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin
 
 #prompt
-export PS1="[\W]$ "
+#export PS1="[\W]$ " goto git > autocomplete
 export PAGER=less
 LESSOPEN="|lesspipe.sh %s"; export LESSOPEN 
 export HISTSIZE=50000
@@ -43,3 +43,9 @@ function pmodule() {
     perl -le 'my $mod = $ARGV[0] . ".pm"; eval {require "$mod"}; if($@) { print "missing pm.." } else { print $INC{$mod}; }' $1
 }
 alias perldoc="/usr/bin/perldoc5.16"
+
+#git
+##autocomplete
+source ./git-completion.bash
+source ./git-prompt.bash
+export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
