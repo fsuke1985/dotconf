@@ -3,3 +3,8 @@
 sub afterinit {
     push @DB::typeahead, "{{ v";
 }
+
+#デバッガ終了時のデフォルト設定
+sub at_exit {
+
+}
