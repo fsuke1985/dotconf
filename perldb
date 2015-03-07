@@ -1,0 +1,5 @@
+
+#デバッガ起動時のデフォルト設定
+sub afterinit {
+    push @DB::typeahead, "{{ v";
+}

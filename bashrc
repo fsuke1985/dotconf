@@ -25,6 +25,7 @@ function lessc () { /usr/share/vim/vim73/macros/less.sh "$@"; }
 alias py='python'
 alias ll='l'
 alias tmp='cd $TMPDIR'
+alias cpula='/usr/bin/g++'
 
 #util
 function seqf() {

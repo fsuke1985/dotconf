@@ -46,11 +46,23 @@ inoreabbrev PDA use Data::Dumper; $Data::Dumper::Deparse = 1;
 inoreabbrev PST #!/usr/bin/perl<CR>use strict;<CR>use warnings;<CR><CR>
 
 "===========================
+"ruby
+"===========================
+autocmd BufNewFile,BufRead *.rb   set tabstop=2 shiftwidth=2 softtabstop=2
+
+"===========================
 "python
 "===========================
 autocmd BufNewFile,BufRead *.py  set filetype=python
 autocmd BufNewFile,BufRead *.py  0r $HOME/.vim/template/python.temp
 inoreabbrev PYST #!/usr/bin/python<CR>#-*-coding: utf8-*-<CR>
+
+
+"===========================
+"javascript
+"===========================
+au FileType javascript call JavaScriptFold()
+
 
 "===========================
 "HTML
