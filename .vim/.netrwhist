@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/afsuke/project/tmp'
-let g:netrw_dirhist_2='/Users/afsuke/Intex/js'
-let g:netrw_dirhist_3='/Users/afsuke/Intex'
-let g:netrw_dirhist_4='/Users/afsuke/Intex/exp'
-let g:netrw_dirhist_5='/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/sys'
-let g:netrw_dirhist_6='/Users/afsuke/.cpanm/work/1425558693.3333/Carp-1.3301'
-let g:netrw_dirhist_7='/Users/afsuke/.cpanm/work/1425558693.3333/Carp-1.3301/lib'
-let g:netrw_dirhist_8='/Users/afsuke/.cpanm/work/1425558693.3333/Carp-1.3301/lib/Carp'
-let g:netrw_dirhist_9='/Users/afsuke/.cpanm/work/1425558693.3333/Carp-1.3301/lib'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/private/var/folders/wg/1_4z41c1217b0962jfltz_gm0000gn'
+let g:netrw_dirhist_2='/private/var/folders/wg'
+let g:netrw_dirhist_3='/private/var/folders'
+let g:netrw_dirhist_4='/private/var'
+let g:netrw_dirhist_5='/private'
