@@ -1,4 +1,4 @@
-"===========================
+"==========================
 "init .vimrc
 "===========================
 inoremap <C-e> <Esc>
@@ -26,7 +26,7 @@ set expandtab
 set shiftwidth=4
 set shiftround
 set cursorline
-colorscheme koehler
+"colorscheme koehler
 set encoding=utf-8
 
 "===========================
@@ -59,14 +59,14 @@ inoreabbrev PYST #!/usr/bin/python<CR>#-*-coding: utf8-*-<CR>
 
 
 "===========================
-"javascript
+"avascript
 "===========================
-au FileType javascript call JavaScriptFold()
-
+"au FileType javascript call JavaScriptFold()
 
 "===========================
 "HTML
 "===========================
+autocmd BufNewFile *.html 0r $HOME/.vim/template/html5.temp
 
 "===========================
 "vi util
@@ -86,9 +86,9 @@ vnoremap < <gv
 
 "//etc//
 "auto closed {}
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap [<Enter> []<Left><CR><ESC><S-o>
+"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "Buf enter -> currentbuf
 autocmd BufEnter * execute ":lcd".expand("%:p:h")
 "serch hilight erase
@@ -99,3 +99,29 @@ function! Crfc()
     :!osascript ~/.vim/bin/chrome_reflash.scpt
 endfunction
 noremap <F5> :<C-u>call Crfc()<CR>
+
+"===========================
+"" Start Neobundle Settings.
+"===========================
+" bundleで管理するディレクトリを指定
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+"Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" neobundle自体をneobundleで管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+" 追加するプラグイン
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'nathanaelkane/vim-indent-guides' 
+NeoBundle 'JavaScript-syntax'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'hail2u/vim-css3-syntax'
+call neobundle#end()
+" Required:
+filetype plugin indent on
+"
+"未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
+" 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
+NeoBundleCheck
