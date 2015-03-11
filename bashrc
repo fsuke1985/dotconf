@@ -44,6 +44,8 @@ function pmodule() {
     perl -le 'my $mod = $ARGV[0] . ".pm"; eval {require "$mod"}; if($@) { print "missing pm.." } else { print $INC{$mod}; }' $1
 }
 alias perldoc="/usr/bin/perldoc5.16"
+export PATH=$PATH/:~/.plenv/bin/
+eval "$(plenv init -)"
 
 #git
 ##autocomplete

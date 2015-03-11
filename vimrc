@@ -59,9 +59,16 @@ inoreabbrev PYST #!/usr/bin/python<CR>#-*-coding: utf8-*-<CR>
 
 
 "===========================
-"avascript
+"javascript
 "===========================
 "au FileType javascript call JavaScriptFold()
+
+"===========================
+"Java
+"===========================
+let java_highlight_all=1
+let java_highlight_functions="style"
+let java_allow_cpp_keywords=1
 
 "===========================
 "HTML
