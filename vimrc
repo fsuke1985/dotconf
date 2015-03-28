@@ -1,7 +1,7 @@
 "==========================
 "init .vimrc
 "===========================
-inoremap <C-e> <Esc>
+inoremap <c-k> <esc>
 autocmd!
 set verbose=0
 
@@ -28,7 +28,6 @@ set shiftround
 set cursorline
 "colorscheme koehler
 set encoding=utf-8
-
 "===========================
 "perl
 "===========================
@@ -125,6 +124,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 call neobundle#end()
 " Required:
 filetype plugin indent on
@@ -132,3 +133,7 @@ filetype plugin indent on
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
 " 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
 NeoBundleCheck
+" NERDTree入れたらデフォルトのEコマンドが使えなくなったのでalias設定
+command EE NERDTree
+" Unite
+command Ubuf Unite buffer

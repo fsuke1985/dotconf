@@ -44,7 +44,8 @@ function pmodule() {
     perl -le 'my $mod = $ARGV[0] . ".pm"; eval {require "$mod"}; if($@) { print "missing pm.." } else { print $INC{$mod}; }' $1
 }
 alias perldoc="/usr/bin/perldoc5.16"
-export PATH=$PATH/:~/.plenv/bin/
+##plenv
+export PATH=$PATH:~/.plenv/bin/
 eval "$(plenv init -)"
 
 #git
@@ -52,3 +53,7 @@ eval "$(plenv init -)"
 source ~/.gitd/dotconf/git-completion.bash
 source ~/.gitd/dotconf/git-prompt.bash
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+#rbenv
+export PATH=$PATH:~/.rbenv/bin/
+eval "$(rbenv init -)"

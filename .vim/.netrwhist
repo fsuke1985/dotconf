@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/private/var/folders/wg/1_4z41c1217b0962jfltz_gm0000gn'
-let g:netrw_dirhist_2='/private/var/folders/wg'
-let g:netrw_dirhist_3='/private/var/folders'
-let g:netrw_dirhist_4='/private/var'
-let g:netrw_dirhist_5='/private'
-let g:netrw_dirhist_6='/Users/afsuke'
-let g:netrw_dirhist_7='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/afsuke/.gitd/Devnode'
+let g:netrw_dirhist_2='/Users/afsuke/.gitd/Devnode/src/js'
+let g:netrw_dirhist_3='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T'
+let g:netrw_dirhist_4='/Users/afsuke/.gitd/Devnode'
+let g:netrw_dirhist_5='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T/ActiveSupport'

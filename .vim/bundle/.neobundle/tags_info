@@ -1,7 +1,9 @@
 JavaScript-syntax
 emmet-vim
 neobundle.vim
+neomru.vim
 nerdtree
+unite.vim
 vim-autoclose
 vim-css3-syntax
 vim-indent-guides
