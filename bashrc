@@ -1,9 +1,13 @@
 export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin:~/project/bin/
 
+
+export LESS='-R'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+
+
 #prompt
 #export PS1="[\W]$ " goto git > autocomplete
 export PAGER=less
-LESSOPEN="|lesspipe.sh %s"; export LESSOPEN 
 export HISTSIZE=50000
 export HISTFILESIZE=50000
 shopt -s histappend
@@ -16,7 +20,7 @@ ulimit -c 0
 function l() { command ls -altrFGh "$@"; }
 function c() { command cat -n "$@"; }
 function cl() { command clear; }
-function less() { command less -X -i "$@"; }
+#function less() { command less -X -i "$@"; }
 function ml() { command multitail "$@"; }
 function pstree() { command ps axjf; } #no osx
 function lessc () { /usr/share/vim/vim73/macros/less.sh "$@"; }
