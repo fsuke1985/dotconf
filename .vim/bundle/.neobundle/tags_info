@@ -3,8 +3,10 @@ emmet-vim
 neobundle.vim
 neomru.vim
 nerdtree
+perldoc-vim
 unite.vim
-vim-autoclose
 vim-css3-syntax
 vim-indent-guides
 vim-javascript
+vim-perl
+vim-quickrun

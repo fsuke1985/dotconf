@@ -1,8 +1,7 @@
-export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin:~/project/bin/
-
+export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/perl5/bin/:~/.vim/bin:~/project/bin/:~/.bin/
 
 export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+export LESSOPEN="|/usr/local/Cellar/lesspipe/1.82/bin/lesspipe.sh %s"
 
 
 #prompt
@@ -61,3 +60,6 @@ export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 #rbenv
 export PATH=$PATH:~/.rbenv/bin/
 eval "$(rbenv init -)"
+
+#ssh agent
+eval `ssh-agent`

@@ -32,10 +32,8 @@ set encoding=utf-8
 "perl
 "===========================
 nmap <F4> :w !perl<CR>
-autocmd BufNewFile,BufRead t,psgi  set filetype=perl
-autocmd FileType perl,cgi,psgi :compiler perl
-autocmd BufNewFile,BufRead *.psgi   set filetype=perl
-autocmd BufNewFile,BufRead *.t      set filetype=perl
+autocmd BufNewFile,BufRead t,psgi,pm  set filetype=perl
+autocmd FileType perl,cgi,psgi,pm :compiler perl
 command! Tf :edit `=tempname()`
 command! Tfp :edit `=tempname()`|:set filetype=perl
 "add comment for perl
@@ -118,7 +116,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " 追加するプラグイン
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Townk/vim-autoclose'
+"NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'petdance/vim-perl'
+NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides' 
 NeoBundle 'JavaScript-syntax'
@@ -127,9 +128,7 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 call neobundle#end()
-" Required:
 filetype plugin indent on
-"
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
 " 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
 NeoBundleCheck
@@ -137,3 +136,19 @@ NeoBundleCheck
 command EE NERDTree
 " Unite
 command Ubuf Unite buffer
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+
+"Quickrun alias
+nmap <Leader>r <plug>(quickrun)
+"let b:quickrun_config = {'outputter/buffer/split': 'botright'} "画面下段に出力を表示
+let b:quickrun_config = {'outputter/buffer/into': 1}    "実行後にカーソルをバッファへ移動。これをやればqだけで出力バッファを閉じれる
+
+
+
