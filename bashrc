@@ -55,7 +55,7 @@ eval "$(plenv init -)"
 ##autocomplete
 source ~/.gitd/dotconf/git-completion.bash
 source ~/.gitd/dotconf/git-prompt.bash
-export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+export PS1='[\e[46m\u@\h\e[0m \W$(__git_ps1 " (%s)")]\$ '
 
 #rbenv
 export PATH=$PATH:~/.rbenv/bin/
