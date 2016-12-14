@@ -3,7 +3,9 @@ emmet-vim
 neobundle.vim
 neomru.vim
 nerdtree
+open-browser.vim
 perldoc-vim
+previm
 unite.vim
 vim-css3-syntax
 vim-indent-guides

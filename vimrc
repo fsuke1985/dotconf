@@ -54,7 +54,6 @@ autocmd BufNewFile,BufRead *.py  set filetype=python
 autocmd BufNewFile,BufRead *.py  0r $HOME/.vim/template/python.temp
 inoreabbrev PYST #!/usr/bin/python<CR>#-*-coding: utf8-*-<CR>
 
-
 "===========================
 "javascript
 "===========================
@@ -71,6 +70,11 @@ let java_allow_cpp_keywords=1
 "HTML
 "===========================
 autocmd BufNewFile *.html 0r $HOME/.vim/template/html5.temp
+
+"===========================
+"Markdown
+"===========================
+au BufRead,BufNewFile *.md set filetype=markdown
 
 "===========================
 "vi util
@@ -127,6 +131,8 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 call neobundle#end()
 filetype plugin indent on
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
@@ -134,6 +140,9 @@ filetype plugin indent on
 NeoBundleCheck
 " NERDTree入れたらデフォルトのEコマンドが使えなくなったのでalias設定
 command EE NERDTree
+" ショートカット
+nnoremap <silent><C-e> :NERDTreeToggle<CR> 
+
 " Unite
 command Ubuf Unite buffer
 let g:unite_enable_start_insert=1
