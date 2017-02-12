@@ -22,11 +22,10 @@ set smartindent
 set smarttab
 
 set tabstop=4
-set expandtab
 set shiftwidth=4
+set expandtab
 set shiftround
 set cursorline
-"colorscheme koehler
 set encoding=utf-8
 "===========================
 "perl
@@ -157,5 +156,8 @@ nmap <Leader>r <plug>(quickrun)
 "let b:quickrun_config = {'outputter/buffer/split': 'botright'} "画面下段に出力を表示
 let b:quickrun_config = {'outputter/buffer/into': 1}    "実行後にカーソルをバッファへ移動。これをやればqだけで出力バッファを閉じれる
 
-
-
+" vim-indent-guides
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_enable_on_vim_startup = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
