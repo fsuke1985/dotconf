@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/afsuke/.gitd/kurino'
 let g:netrw_dirhist_2='/Users/afsuke/.gitd'
 let g:netrw_dirhist_3='/Users/afsuke/.gitd/Fornax/src'
 let g:netrw_dirhist_4='/Users/afsuke'
 let g:netrw_dirhist_5='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T'
 let g:netrw_dirhist_6='/Users/afsuke/.gitd/bootstrap'
+let g:netrw_dirhist_7='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T/org/eclipse/Foo'
+let g:netrw_dirhist_8='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn/T/jsGMap/test'
+let g:netrw_dirhist_9='/private/var/folders/6g/q7016grn6t74_cb5zx4d6kz40000gn'
