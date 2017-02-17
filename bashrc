@@ -5,7 +5,7 @@ export LESSOPEN="|/usr/local/Cellar/lesspipe/1.82/bin/lesspipe.sh %s"
 
 
 #prompt
-#export PS1="[\W]$ " goto git > autocomplete
+#export PS1="[\W]$ " goto it > autocomplete
 export PAGER=less
 export HISTSIZE=50000
 export HISTFILESIZE=50000
@@ -55,7 +55,7 @@ eval "$(plenv init -)"
 ##autocomplete
 source ~/.gitd/dotconf/git-completion.bash
 source ~/.gitd/dotconf/git-prompt.bash
-export PS1='[\e[46m\u@\h\e[0m \W$(__git_ps1 " (%s)")]\$ '
+export PS1='[\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\]] \$ '
 
 #rbenv
 export PATH=$PATH:~/.rbenv/bin/
