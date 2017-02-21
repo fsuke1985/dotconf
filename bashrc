@@ -2,7 +2,7 @@ export PATH=$PATH:~/bin/:/usr/local/bin/:/usr/local/sbin/:/Developer/usr/bin/:~/
 
 export LESS='-R'
 export LESSOPEN="|/usr/local/Cellar/lesspipe/1.82/bin/lesspipe.sh %s"
-
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
 
 #prompt
 #export PS1="[\W]$ " goto it > autocomplete
