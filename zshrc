@@ -33,6 +33,10 @@ export EDITOR=vim
 autoload -Uz colors
 colors
 
+# バインドキー
+bindkey '^]'   vi-find-next-char
+bindkey '^[^]' vi-find-prev-char
+
 # 補完
 # 補完機能を有効にする
 autoload -Uz compinit
@@ -65,6 +69,8 @@ setopt hist_ignore_space
 
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
+# コマンドラインで＃コメントを有効にする
+setopt interactivecomments
 
 umask 022
 ulimit -c 0

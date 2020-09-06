@@ -58,9 +58,10 @@ autocmd BufNewFile,BufRead *.rb   set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.py  set filetype=python
 
 "===========================
-"javascript
+"typescript
 "===========================
-"au FileType javascript call JavaScriptFold()
+let g:tsuquyomi_completion_detail = 1
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 "===========================
 "Java
@@ -139,6 +140,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'Quramy/tsuquyomi'
+
 call neobundle#end()
 filetype plugin indent on
 "未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
