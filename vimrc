@@ -142,11 +142,8 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Quramy/tsuquyomi'
-<<<<<<< Updated upstream
-=======
 NeoBundle 'tomasr/molokai'
 NeoBundle 'ujihisa/unite-colorscheme'
->>>>>>> Stashed changes
 
 call neobundle#end()
 filetype plugin indent on
