@@ -144,6 +144,7 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Quramy/tsuquyomi'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'cohama/lexima.vim'
 
 call neobundle#end()
 filetype plugin indent on
