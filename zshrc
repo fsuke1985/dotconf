@@ -113,3 +113,4 @@ autoload -Uz compinit
 compinit
 complete -C '/usr/local/aws-cli/aws_completer' aws
 complete -C '/usr/local/aws-cli/v2/current/bin/aws_completer' aws
+
