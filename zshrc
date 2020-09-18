@@ -107,7 +107,7 @@ eval "$(direnv hook zsh)"
 #git
 ##autocomplete
 fpath=(~/.zsh $fpath)
-source ~/.git-prompt.sh
+#source ~/.git-prompt.sh
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 compinit
