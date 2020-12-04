@@ -89,6 +89,7 @@ alias py='python'
 alias ll='ls -altr'
 alias tmp='cd $TMPDIR'
 alias cpula='/usr/bin/g++'
+alias less='/usr/bin/less -X'
 
 #util
 function seqf() {
