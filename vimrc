@@ -99,14 +99,6 @@ nnoremap <F3> :set hlsearch!<CR>
 vnoremap > >gv
 vnoremap < <gv
 
-"//etc//
-"auto closed {}
-"inoremap {<Enter> {}<Left><CR><ESC><S-o>
-"inoremap [<Enter> []<Left><CR><ESC><S-o>
-"inoremap (<Enter> ()<Left><CR><ESC><S-o>
-"Buf enter -> currentbuf
-"autocmd BufEnter * execute ":lcd".expand("%:p:h")
-"serch hilight erase
 nmap <silent><C-\> :nohlsearch <CR><ESC>
 
 "//user function//
@@ -115,43 +107,6 @@ function! Crfc()
 endfunction
 noremap <F5> :<C-u>call Crfc()<CR>
 
-"===========================
-"" Start Neobundle Settings.
-"===========================
-" bundleで管理するディレクトリを指定
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-"Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" neobundle自体をneobundleで管理
-NeoBundleFetch 'Shougo/neobundle.vim'
-" 追加するプラグイン
-NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'petdance/vim-perl'
-NeoBundle 'hotchpotch/perldoc-vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'nathanaelkane/vim-indent-guides' 
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'Quramy/tsuquyomi'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'cohama/lexima.vim'
-
-call neobundle#end()
-filetype plugin indent on
-"未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
-" 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
-NeoBundleCheck
-" NERDTree入れたらデフォルトのEコマンドが使えなくなったのでalias設定
 command EE NERDTree
 " ショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR> 
@@ -175,3 +130,73 @@ let b:quickrun_config = {'outputter/buffer/into': 1}    "実行後にカーソ�
 
 "tab keymap
 nnoremap <silent> <leader>tn :<c-u>tabnext<cr>
+
+"===========================
+" Vundle.vim 
+"===========================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'othree/yajs.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'thinca/vim-quickrun'
+Plugin 'petdance/vim-perl'
+Plugin 'hotchpotch/perldoc-vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'nathanaelkane/vim-indent-guides' 
+Plugin 'JavaScript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/neomru.vim'
+Plugin 'kannokanno/previm'
+Plugin 'tyru/open-browser.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'tomasr/molokai'
+Plugin 'ujihisa/unite-colorscheme'
+Plugin 'cohama/lexima.vim'
+
+
+" " plugin from http://vim-scripts.org/vim/scripts.html
+" " Plugin 'L9'
+" " Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" " git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" " The sparkup vim script is in a subdirectory of this repo called vim.
+" " Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" " Install L9 and avoid a Naming conflict if you've already installed a
+" " different version somewhere else.
+" " Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList       - lists configured plugins
+" " :PluginInstall    - installs plugins; append `!` to update or just
+":PluginUpdate
+" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" " :PluginClean      - confirms removal of unused plugins; append `!` to
+"auto-approve removal
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " Put your non-Plugin stuff after this line
