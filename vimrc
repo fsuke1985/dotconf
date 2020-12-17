@@ -169,6 +169,10 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'tomasr/molokai'
 Plugin 'ujihisa/unite-colorscheme'
 Plugin 'cohama/lexima.vim'
+Plugin 'othree/html5.vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'tpope/vim-commentary'
 
 " " plugin from http://vim-scripts.org/vim/scripts.html
 " " Plugin 'L9'
