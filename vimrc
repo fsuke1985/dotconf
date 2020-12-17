@@ -170,7 +170,6 @@ Plugin 'tomasr/molokai'
 Plugin 'ujihisa/unite-colorscheme'
 Plugin 'cohama/lexima.vim'
 
-
 " " plugin from http://vim-scripts.org/vim/scripts.html
 " " Plugin 'L9'
 " " Git plugin not hosted on GitHub
